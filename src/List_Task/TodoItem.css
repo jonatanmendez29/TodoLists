@@ -1,0 +1,144 @@
+.gridTask {
+    display: flex;
+    flex-direction: column;
+    scroll-margin: 80px;
+    background-color: var(--color-background-task-white);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    width: 250px;
+    scroll-margin: 80px;
+    list-style: none;
+}
+.gridTaskText{
+    align-self: center;
+    border-style: solid;
+    border-color: var(--color-text-border-grey1);
+    border-radius: 8px;
+    width: 240px;
+    cursor: pointer;
+}
+.gridTaskText:hover {
+    border-color:var(--color-text-border-blue2);
+    border-width: 3px;
+}
+.gridTaskButtons {
+    align-self: flex-end;
+}
+.TodoItem-p {
+    box-sizing: content-box;
+    font-size: 15px;
+    border: none;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    cursor: pointer;
+    min-height: 24px;
+    padding: 8px 12px 4px;
+    position: static;
+    text-wrap-mode: wrap;
+}
+.TodoItem-p:hover {
+    border: none;
+}
+.TodoItem-p--complete {
+    text-decoration: line-through;
+    color: var(--color-completed-task);
+}
+.Botton-del {
+    border: none;
+    background-color: transparent;
+    transition-duration: 0.3s;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+.Botton-del:hover {
+    opacity: 1;
+    color:var(--color-button-red1);
+}
+.buttonDone {
+    font-size: 12px;
+    align-self: center;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.6;
+    
+ } 
+ .buttonDone:hover {
+    color: var(--color-completed-task);
+    opacity: 1;
+ }
+ .buttonDone-complete {
+    color: var(--color-completed-task);
+ }
+ .buttonDone-complete:hover {
+    color: var(--color-button-red1);
+ }
+
+ .OcultarNew {
+    display: none;
+}
+.VisibleNew {
+    display: inline-block;
+}
+.bloqueGeneralEdit {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 0;
+    font-size: 16px;
+    width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-background-task-white);
+    border-radius: 8px;
+    width: 100%;
+}
+textarea {
+    width: 100%;
+    height: 50px;
+    margin: 8px;
+    border-radius: 8px;
+    border-color: var(--color-text-border-blue2);
+    resize: none;
+}
+.buttonsArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttonSubmit {
+    background-color: var(--color-button-red1);
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonSubmit:hover {
+    opacity: 1;
+}
+.buttonCancelForm {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonCancelForm:hover {
+    background-color: var(--color-button-blue1);
+    opacity: 1;
+}

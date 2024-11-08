@@ -1,0 +1,68 @@
+.contenedorGraph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    width: 90%;
+    padding-left: 10px;
+
+}
+.gaph {
+    display: inline-flex;
+    position: relative;
+    justify-self: center;
+    width: 8rem;
+    height: 8rem;
+    background: transparent;
+    margin: auto;
+    border-color: #111;
+}
+.grafico {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg, var(--color-completed-task) 50%, var(--color-text-border-grey1) 50%
+    );
+    --deg: 0deg;
+    position: absolute;
+    transform: rotate(var(--deg));
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.grafico_before {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    content: "Todos";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff content-box;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: #111;
+    text-align: center;
+    line-height: 4rem;
+    --deg: 0deg;
+    transform: rotate(var(--deg));
+}
+.grafico_after {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "50%";
+    background: linear-gradient(transparent 50%, #fff 50%);
+    transform: scale(1.1) ;
+    text-align: center;
+    color: #111;
+    line-height: 8rem;
+    font-size: 1rem;
+}

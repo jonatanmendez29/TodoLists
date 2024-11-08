@@ -1,5 +1,5 @@
 {
-  "name": "platzi-intro-react-base",
+  "name": "TodoList_with_React",
   "version": "0.1.0",
   "dependencies": {
     "react": "^18",
@@ -10,7 +10,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -28,5 +30,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "hhttps://jonatanmendez29.github.io/TodoLists/",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }

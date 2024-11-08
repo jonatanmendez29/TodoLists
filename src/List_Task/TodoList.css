@@ -1,0 +1,173 @@
+.lista {
+    display: block;
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding: 0 6px;
+    height: 100%;
+    white-space: nowrap;
+
+
+}
+.bloqueGeneral {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--color-background-list-blue1);
+    box-sizing: border-box;
+    border-radius: 12%;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 320px;
+    max-height: 100%;
+    scroll-margin: 8px;
+    flex-basis: 320px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    scroll-margin: 8px;
+    
+}
+.bloqueGeneralEdit {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 0;
+    font-size: 16px;
+}
+.bloqueGeneralTodos {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    z-index: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-background-list-blue1);
+    height: 100%;
+    list-style: none;
+    padding: 0 4px;
+    user-select: none;
+}
+.bloqueGeneralCat {
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8px 8px 0;
+    font-size: 16px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+.bloqueGeneralCatBlo {
+    position: relative;
+    flex-basis: min-content;
+    flex-grow: 1;
+    min-height: 20px;
+}
+.bloqueGeneralCatBlo h3{
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+}
+.bloqueGeneralCatBlo textarea{
+    height: 32px;
+    overflow: hidden;
+    border-radius: 8px;
+    opacity: 0;
+    background: transparent;
+    resize: none;
+    overflow-wrap: break-word;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition-duration: 85ms;
+}
+.bloqueGeneralCat button {
+    transition: 0.3s;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    align-self: center;
+    justify-self: flex-end;
+    cursor: pointer;
+    opacity: 0.6;
+} 
+.bloqueGeneralCat button:hover {
+    color: var(--color-button-red1);
+    opacity: 1;
+}
+.bloqueGeneralNewTask {
+    align-self: center;
+}
+.bloqueGeneralNewTask button{
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+.bloqueGeneralNewTask button:hover {
+    opacity: 1;
+    background-color: var(--color-button-blue1);
+    border-radius: 8%;
+}
+.OcultarNew {
+    display: none;
+}
+.VisibleNew {
+    display: inline-block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-background-list-blue1);
+    border-radius: 8px;
+}
+textarea {
+    width: 90%;
+    height: 30px;
+    margin: 8px;
+    border-radius: 8px;
+    border-color: var(--color-text-border-blue2);
+    resize: none;
+}
+.buttonsArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttonSubmit {
+    background-color: var(--color-button-red1);
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonSubmit:hover {
+    opacity: 1;
+}
+.buttonCancelForm {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonCancelForm:hover {
+    background-color: var(--color-button-blue1);
+    opacity: 1;
+}

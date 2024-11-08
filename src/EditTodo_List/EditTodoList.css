@@ -1,0 +1,47 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-background-list-blue1);
+    border-radius: 8px;
+}
+textarea {
+    width: 90%;
+    height: 30px;
+    margin: 8px;
+    border-radius: 8px;
+    border-color: var(--color-text-border-blue2);
+    resize: none;
+}
+.buttonsArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttonSubmit {
+    background-color: var(--color-button-red1);
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonSubmit:hover {
+    opacity: 1;
+}
+.buttonCancelForm {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 8px;
+    margin: 8px;
+}
+.buttonCancelForm:hover {
+    background-color: var(--color-button-blue1);
+    opacity: 1;
+}

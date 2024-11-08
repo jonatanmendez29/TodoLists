@@ -1,0 +1,12 @@
+.gridSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px;
+    width: 90%;
+    height: 30px;
+}
+.gridSearch input {
+    align-self: center;
+    width: 20%;
+}

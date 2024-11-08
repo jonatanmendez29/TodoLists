@@ -1,0 +1,36 @@
+.flexEmty {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    align-content: center;
+}
+.addListAction-Emty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: var(--color-background-list-blue1);
+    border-radius: 8px;
+
+}
+.addListAction-Emty textarea{
+    margin: 8px;
+    resize: none;
+    border-color: var(--color-text-border-blue1);
+    width: 90%;
+    border-radius: 8px;
+}
+.addListAction-EmtyButAdd{
+    margin-bottom: 8px;
+    font-size: 18px;
+    background-color: var(--color-button-red1);
+    border-radius: 8px;
+    border: none;
+    opacity: 0.6;
+    height: 30px;
+    cursor: pointer;
+}
+.addListAction-EmtyButAdd:hover {
+    opacity: 1;
+}

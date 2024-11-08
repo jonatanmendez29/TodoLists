@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #233553;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #97ca3f;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [first] 25% [line2] 75% [end];
+  grid-template-rows: [row1] 10% [row2] 90% [last-line];
+  grid-template-areas: 
+  "header Resumen"
+  "Task Task";
+  overflow: hidden;
+  height: 100%;
+}
+
+.item-head {
+  grid-area: header;
+  font-size: 24px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0;
+  border-bottom: 5px solid var(--color-button-red1);
+  height: 100%;
+}
+.item-task {
+  grid-area: Task;
+  position: relative;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 95%;
+  height: 100%;
+}
+.item-resumen {
+  grid-area: Resumen;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  word-break: break-all;
+  justify-content: center;
+  align-content: center;
+  border-bottom: 5px solid var(--color-button-red1);
+  height: 100%;
+}
+ul {
+  margin: o;
+  padding: 0;
+  list-style-type: none;
+}
+.flexTextCont {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  user-select: none;
+  gap: 8px;
+  height: 100%;
+  flex: 1 1 0%;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+}
