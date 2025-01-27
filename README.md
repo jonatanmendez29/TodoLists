@@ -1,11 +1,12 @@
-@@ -3,9 +3,10 @@ This project is a basic to do list with the following featur:
+This project is a basic to do list with the following featur:
 * Task: create, edit, delete and complete
 * Seach task by keywords in all list
 * Storage in localStorage
-![Captura de pantalla 2024-11-07 a la(s) 5 31 58 p m](https://github.com/user-attachments/assets/6d031924-7d95-4ab9-b4b3-d90bb1147306)
+![Captura de pantalla 2025-01-27 a la(s) 4 24 54 p m](https://github.com/user-attachments/assets/4a66b732-a39b-4704-86fe-ddb3148e6f22)
+
 
 This project was created using:
-- React / JS
+- JS / React
 - LocalStorage
 
 Link: https://jonatanmendez29.github.io/TodoLists/
