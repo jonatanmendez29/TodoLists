@@ -6,7 +6,23 @@
     width: 90%;
     height: 30px;
 }
-.gridSearch input {
+.barSearch {
+    width: clamp(200px, 50%, 300px);
     align-self: center;
-    width: 20%;
+    border-radius: 0.5em;
+    background-color: #f1effd;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.barSearch input {
+    width: 80%;
+    align-self: center;
+    border: none;
+    background-color: #f1effd;
+}
+.barSearch span{
+    opacity: 0.6;
+    align-self: center;
 }

@@ -35,11 +35,11 @@ function CreateList({distinct, setDistinct}){
             <div className={`addList ${boxDesp && "addListHide"}`}>
                 <button
                     onClick={DisableBox}
-                > + Añade lista</button>
+                > + Add new list</button>
             </div>
             <div className={`addListAction ${boxDesp && "addListActionDisable"}`}>
                 <textarea 
-                    placeholder='Escribe el nombre de la nueva lista'
+                    placeholder='Write here the name of the new list'
                     maxLength={50}
                     value={newList}
                     onChange={(event) => {
@@ -50,12 +50,12 @@ function CreateList({distinct, setDistinct}){
                     <button 
                         className='addListActionButAdd'
                         onClick={AnadeLista}
-                    >Añadir lista</button>
+                    >Create</button>
                     <button 
                         className='addListActionButCans'
                         onClick={HideBox}
                     >
-                        <CancelIcon/>
+                        Cancel
                     </button>
                 </div>
             </div>

@@ -1,110 +1,110 @@
 import React from 'react';
 import './TodoList.css';
-import {DeleteIcon} from '../Icons/DeleteIcon';
+import { DeleteIcon } from '../Icons/DeleteIcon';
 import { TodoContext } from '../TodoContex';
 
-function TodoList({categoria, idCat, children, onDelete, addTodo, newTask, setNewTask, setNewIdTaskList}){
-  const {UpdateTodo, UpdateList} = React.useContext(TodoContext);
+function TodoList({ categoria, idCat, children, onDelete, addTodo, newTask, setNewTask, setNewIdTaskList }) {
+  const { UpdateTodo, UpdateList } = React.useContext(TodoContext);
   const [boxDesp, setBoxDesp] = React.useState(false);
   const [boxDesp2, setBoxDesp2] = React.useState(false);
   const [textUpdate, setTextUpdate] = React.useState(categoria);
-  function DisableBox(){
+  function DisableBox() {
     setBoxDesp(true);
   }
-  function HideBox(){
+  function HideBox() {
     setBoxDesp(false);
     setNewTask('');
     setNewIdTaskList(0);
   }
 
-    return(
-      <div className='lista'>
+  return (
+    <div className='lista'> 
       <div className='bloqueGeneral'>
         <div className={`OcultarNew ${!boxDesp2 && "VisibleNew"}`}>
-        <div className="bloqueGeneralCat">
-          <div className='bloqueGeneralCatBlo'>
-          <h3
-            onClick={() => {
-              setBoxDesp2(true);
-            }}
-          >{categoria}</h3>
+          <div className="bloqueGeneralCat">
+            <div className='bloqueGeneralCatBlo'>
+              <h3
+                onClick={() => {
+                  setBoxDesp2(true);
+                }}
+              >{categoria}</h3>
+            </div>
+            <button onClick={onDelete}>
+              <DeleteIcon />
+            </button>
           </div>
-          <button onClick={onDelete}>
-          <DeleteIcon/>
-          </button>
-        </div>
         </div>
         <div className={`OcultarNew ${boxDesp2 && "VisibleNew"}`}>
-          <div className='bloqueGeneralEdit'>
-          <form 
-            onSubmit={(event) => {
-              event.preventDefault();
-              UpdateList({idCat, newText: textUpdate});
-              setBoxDesp2(false);
-            }}
-          >
-            <textarea
+          <div className='editTitle'>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                UpdateList({ idCat, newText: textUpdate });
+                setBoxDesp2(false);
+              }}
+            >
+              <textarea
                 value={textUpdate}
                 onChange={(event) => {
-                    setTextUpdate(event.target.value);
+                  setTextUpdate(event.target.value);
+                }}
+              >
+              </textarea>
+              <div className="buttonsArea">
+                <button
+                  type="sutmit"
+                  className="buttonSubmit"
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  className="buttonCancelForm"
+                  onClick={() => {
+                    setBoxDesp2(false);
+                    setTextUpdate(textUpdate);
                   }}
-            >
-            </textarea>
-            <div className="buttonsArea">
-                <button
-                    type="sutmit"
-                    className="buttonSubmit"
                 >
-                    Editar
+                  Cancel
                 </button>
-                <button
-                    type="button"
-                    className="buttonCancelForm"
-                    onClick={() => {
-                        setBoxDesp2(false);
-                        setTextUpdate(textUpdate);
-                    }}
-                >
-                    Cancelar
-                </button>
-            </div>
-          </form>
+              </div>
+            </form>
           </div>
         </div>
-        <div className='bloqueGeneralNewTask'> 
+        <div className='bloqueGeneralNewTask'>
           <div className={`OcultarNew ${!boxDesp && "VisibleNew"}`}>
-            <button onClick={DisableBox}>+ Añade una tarjeta</button>
+            <button onClick={DisableBox}>+ Add new task</button>
           </div>
           <div className={`OcultarNew ${boxDesp && "VisibleNew"}`}>
-            <input 
-                placeholder="Escribe una nueva tarea" 
-                value={newTask}
-                key={idCat}
-                onChange={(event) => {
-                  setNewTask(event.target.value);
-                  setNewIdTaskList(idCat);
-                }}
+            <input
+              placeholder="Write here a new task"
+              value={newTask}
+              key={idCat}
+              onChange={(event) => {
+                setNewTask(event.target.value);
+                setNewIdTaskList(idCat);
+              }}
             />
-            <button 
+            <button
               className="Botton-add"
-                onClick={function(event) {
-                  addTodo(); 
-                  HideBox();
-                }}  
-              >
-                <span className="material-symbols-outlined">note_stack_add</span>
-              </button>
-              <button onClick={HideBox}>
-                <i className="material-symbols-outlined">close</i>
-              </button>
+              onClick={function (event) {
+                addTodo();
+                HideBox();
+              }}
+            >
+              <span className="material-symbols-outlined">note_stack_add</span>
+            </button>
+            <button onClick={HideBox}>
+              <i className="material-symbols-outlined">close</i>
+            </button>
           </div>
         </div>
         <ol className='bloqueGeneralTodos'>
           {children}
         </ol>
       </div>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export { TodoList };
+export { TodoList };

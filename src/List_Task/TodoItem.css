@@ -1,21 +1,20 @@
 .gridTask {
     display: flex;
     flex-direction: column;
-    scroll-margin: 80px;
     background-color: var(--color-background-task-white);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin: 16px;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     padding: 8px;
-    width: 250px;
-    scroll-margin: 80px;
+    width: 80%;
+    overflow: hidden;
     list-style: none;
 }
 .gridTaskText{
     align-self: center;
     border-style: solid;
     border-color: var(--color-text-border-grey1);
-    border-radius: 8px;
+    border-radius: 0.8rem;
     width: 240px;
     cursor: pointer;
 }

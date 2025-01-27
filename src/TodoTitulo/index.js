@@ -13,10 +13,10 @@ function TodoTitulo({ total, completed}){
     porcentaje = Math.round((completedTodos / totalTodos) * 100);
   }
   return(
-    <div className='contenedorGraph'>
+    <div className='contenedorGraph'> 
       <span className='gaph'>
       <span className='grafico'></span>
-      <span className='grafico_before'>Avance</span>
+      <span className='grafico_before'>Completed</span>
       <span className='grafico_after'>{porcentaje}%</span>
       </span>
     </div>

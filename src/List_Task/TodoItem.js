@@ -64,7 +64,7 @@ function TodoItem({ text, completed, idItem, onComplete, onDelete, uncompleteTod
                     type="sutmit"
                     className="buttonSubmit"
                   >
-                  Editar
+                  Update
                   </button>
                   <button
                     type="button"
@@ -74,7 +74,7 @@ function TodoItem({ text, completed, idItem, onComplete, onDelete, uncompleteTod
                       setNewText(newText);
                     }}
                   >
-                  Cancelar
+                  Cancel
                   </button>
                 </div>
               </form>

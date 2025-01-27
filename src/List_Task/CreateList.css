@@ -13,7 +13,7 @@
     opacity: 0.6;
     transition-duration: 0.3s;
     background-color: var(--color-button-red1);
-    border-radius: 8%;
+    border-radius: 0.8rem;
     cursor: pointer;
     border: none;
     text-align: center;
